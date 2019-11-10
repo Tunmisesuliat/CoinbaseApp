@@ -1,0 +1,67 @@
+.navbar-default{
+    background:transparent;
+    transition:500ms ease;
+}
+#container{
+    padding-left: 40px;
+    padding-right: 20px;
+}
+#brand{
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:80px;
+}
+#nav-right{
+    padding-right: 60px;
+}
+/* head{
+    padding-right: 20px;
+    padding-left: 10px;
+} */
+ul li{
+    list-style-type: none;
+    
+}
+ul li a{
+    color: rgb(110, 108, 108);
+}
+a:hover{
+    text-underline-position: below;
+}
+#tab-data{
+    display: flex;
+    flex-direction: row;
+
+}
+#one{
+    padding-right: 15px;
+}
+#img-currency{
+    width: 50px;
+    height:50px;
+}
+span{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+Navbar{
+    overflow: hidden;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    z-index: 1;
+}
+.dropdown-content:hover{
+    display: block;
+}
+Modal{
+    position: fixed;
+    background: white;
+    width: 50%;
+    height: 80%;
+    top: 10%;
+ 
+}
