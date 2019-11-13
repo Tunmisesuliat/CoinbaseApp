@@ -1,6 +1,25 @@
-.navbar-default{
-    background:transparent;
-    transition:500ms ease;
+.dropdown{
+    position: relative;
+    display: inline-block;
+    
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color: white;
+    /* width: 250px; */
+    z-index: 1;
+}
+.dropdown-menu#drop{
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 50px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
 }
 #container{
     padding-left: 40px;
@@ -64,4 +83,7 @@ Modal{
     height: 80%;
     top: 10%;
  
+}
+#heading{
+    padding: 10px 0px;
 }

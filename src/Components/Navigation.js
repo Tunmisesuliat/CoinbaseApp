@@ -10,55 +10,37 @@ import Col from 'react-bootstrap/Col';
 
 
 class Navigation extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {dropDownOpen:false}
-        this.handleOpen = this.handleOpen.bind(this);
-        this.handleClose = this.handleClose.bind(this);
-        this.toggle = this.toggle.bind(this);
-
-    };
-    toggle(){
-        this.setState(prevState => ({
-            dropDownOpen:!prevState.dropDownOpen
-        }));
-    }
-
-    handleOpen(e){
-        e.preventDefault();
-        this.setState({dropDownOpen:true});
-    }
-    handleClose(){
-        this.setState({dropDownOpen:false}, () => {
-            document.removeEventListener('hover', this.handleClose)
-        })
-    }
+    
 
     render(){
     return(
 
-        <Navbar   className="navbar navbar-default" collapseonSelect scrolling="light" bg='light' expand='lg' sticky="top">
+        <Navbar inverse collapseOnSelect className="nav-bar" collapseonSelect scrolling="light" bg='light' expand='lg' sticky="top">
             
             <Navbar.Brand id="brand" href="#">Coinbase</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-between">
                 <Nav className="mr-auto">
                     <Nav.Link href="#">Prices </Nav.Link>
-                    <NavDropdown style={{hover:"display block"}} title="Products"  onMouseEnter = {this.handleOpen} onMouseLeave = {this.handleClose} isOpen={this.state.dropDownOpen}>
-                      
+                    <NavDropdown style={{hover:"display block"}} title="Products" >
+                        <div style={{display:"flex", flexDirection:"column", width:"250px" }} >
+                            <Row>
+                            <Col xs={6} md={6} lg={6}>
                             <NavDropdown.Item href="#">Coinbase</NavDropdown.Item>
                             <NavDropdown.Item href="#">Coinbase</NavDropdown.Item>
                             <NavDropdown.Item href="#">Coinbase</NavDropdown.Item>
-                        
+                            </Col>
+                            <Col xs={6} md={6} lg={6}>
                             <NavDropdown.Item href="#">Coinbase</NavDropdown.Item>
                             <NavDropdown.Item href="#">Coinbase</NavDropdown.Item>
                             <NavDropdown.Item href="#">Coinbase</NavDropdown.Item>
-                        
+                            </Col>
+                            </Row>
+                        </div>
                     </NavDropdown>
 
-                    <NavDropdown title="Company" data-hover="dropdown">
-                        {/* <div className="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false"> */}
-                        
+                    <NavDropdown id="drop" title="Company" data-hover="dropdown" style={{width:"100px"}}>
+                     
                         <NavDropdown.Item href="#">Coinbase</NavDropdown.Item>
                         <NavDropdown.Item href="#">Coinbase</NavDropdown.Item>
                         <NavDropdown.Item href="#">Coinbase</NavDropdown.Item>
@@ -66,6 +48,7 @@ class Navigation extends React.Component{
                     </NavDropdown>
                 
                     <Nav.Link href="#">Earn crypto</Nav.Link>
+                    <Button href="#">upto $130</Button>
                 </Nav>
 
                 <Nav id="nav-right">

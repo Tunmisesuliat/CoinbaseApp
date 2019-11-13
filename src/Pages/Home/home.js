@@ -44,51 +44,51 @@ class Home extends React.Component{
             <div id="wrapper">
                 <div bg="primary" id="jumbotron" className="jumbotron jumbotron-fluid" style={{backgroundColor:"blue"}}>
                     <div className="container">
-                        <Modal id="modal" size="md" dialogClassName="modal-80h" className="modal" show={this.state.show} handleClose={this.hideModal} >
+                        <Modal id="modal" size="md" dialogClassName="modal-80h" className="modal" show={this.state.show} onClose={this.hideModal} >
                             <Modal.Header onClick={this.hideModal}  closeButton >
                                 <Modal.Title>Create Account</Modal.Title>
                             </Modal.Header>
                             <Form inline id="inline-form">
                                 <Modal.Body>
-                                <Row>
-                                    <Col xs={6}>
-                                        <Form.Group >
-                                            <Form.Label>First Name</Form.Label>
-                                            
-                                            <Form.Control type="text" placeholder="Enter First Name" />
-                                        </Form.Group>
+                                    <Row>
+                                        <Col xs={6} md={6} lg={6}>
+                                            <Form.Group >
+                                                <Form.Label>First Name</Form.Label>
+                                                
+                                                <Form.Control type="text" placeholder="Enter First Name" />
+                                            </Form.Group>
+                                        </Col>
+
+                                        <Col xs={6} md={6} lg={6}>
+                                            <Form.Group>
+                                                <Form.Label>Last Name</Form.Label>
+                                                <Form.Control type="text" placeholder="Enter Last Name" />
+                                            </Form.Group>
+                                        </Col>
+                                    </Row>
+
+                                    <Row >
+                                        <Col xs={12} md={12} lg={12}>
+                                    <Form.Group id="group" >
+                                        <Form.Label id="label" >Email Address</Form.Label>
+                                        <Form.Control id="content" type="email" placeholder="name@example.com" />
+                                    </Form.Group>
                                     </Col>
+                                    </Row>
 
-                                    <Col xs={6}>
-                                        <Form.Group>
-                                            <Form.Label>Last Name</Form.Label>
-                                            <Form.Control type="text" placeholder="Enter Last Name" />
-                                        </Form.Group>
-                                    </Col>
-                                </Row>
+                                    <Form.Group id="group" >
+                                        <Form.Label>Password</Form.Label>
+                                        <Form.Control id="content" type="password" placeholder="Password" />
+                                    </Form.Group>
 
-                                <Row >
-                                    <Col xs={12}>
-                                <Form.Group id="group" >
-                                    <Form.Label id="label" >Email Address</Form.Label>
-                                    <Form.Control id="content" type="email" placeholder="name@example.com" />
-                                </Form.Group>
-                                </Col>
-                                </Row>
-
-                                <Form.Group id="group" >
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control id="content" type="password" placeholder="Password" />
-                                </Form.Group>
-
-                                <Form.Group id="group" >
-                                    
-                                    <Form.Check type="checkbox" label="By continuing, i certify that i am 18years of age,and i agree to the user agreement, and privacy policy" />
-                                </Form.Group>
+                                    <Form.Group id="group" >
+                                        
+                                        <Form.Check type="checkbox" label="By continuing, i certify that i am 18years of age,and i agree to the user agreement, and privacy policy" />
+                                    </Form.Group>
                                 </Modal.Body>
                                 <Modal.Footer>
-                                <Button   >Submit</Button>
-                                <Button onClick={this.hideModal}  >Close</Button>
+                                    <Button   >Submit</Button>
+                                    <Button onClick={this.hideModal}  >Close</Button>
                                 </Modal.Footer>
                             </Form>
                         </Modal>
@@ -101,7 +101,7 @@ class Home extends React.Component{
                             </Form>
                         </span>
                         <div id="tab" >
-                        <Tab />
+                            <Tab />
                         </div>
                     </div>
                     
@@ -111,7 +111,7 @@ class Home extends React.Component{
 
                 <section id="main">
                     <div className="container container-fluid"> 
-                        <Row id="earn" >
+                        <Row xs={12} md={12} lg={12} id="earn" >
                             <Col xs={12} md={5} lg={5} id="col-1">
                                 <span><h1>Earn up to $130 worth of crypto</h1></span>
                                 <span><p>Discover how specific cryptocurrencies work — and get a bit of each crypto to try out for yourself.</p></span>
@@ -131,11 +131,11 @@ class Home extends React.Component{
                                         </div>
 
                                         <div id="grid-card" className="card border-light">
-                                        <span id="card-data">
-                                            <img id="one" className="img-currency" alt="img" src={require("../../Assets/images/eos.png")} />
-                                            <h4 id="one">EOS</h4>
-                                            <h4 id="one">EOS</h4>
-                                        </span>
+                                            <span id="card-data">
+                                                <img id="one" className="img-currency" alt="img" src={require("../../Assets/images/eos.png")} />
+                                                <h4 id="one">EOS</h4>
+                                                <h4 id="one">EOS</h4>
+                                            </span>
                                             <span id="card-digits"><p>Earn $20 DAI</p></span>
                                         </div>
 
@@ -183,35 +183,35 @@ class Home extends React.Component{
                     <Row>
                         <Col xs={12} md={4} >
                             <div id="text-image">
-                            <img id="small" src={require("../../Assets/images/chart.png" )}alt="img" />
-                            <dl>
-                                <dt><strong id="strong" >Manage your portfolio</strong></dt>
-                                <dd id="dd">Buy and sell popular digital currencies, keep track of them in the one place.</dd>
-                            </dl>
+                                <img id="small" src={require("../../Assets/images/chart.png" )}alt="img" />
+                                <dl>
+                                    <dt><strong id="strong" >Manage your portfolio</strong></dt>
+                                    <dd id="dd">Buy and sell popular digital currencies, keep track of them in the one place.</dd>
+                                </dl>
                             </div>
 
                             <div id="text-image">
-                            <img id="small" src={require("../../Assets/images/chart.png" )}alt="img" />
-                            <dl>
-                                <dt><strong id="strong">Recurring buys</strong></dt>
-                                <dd id="dd">Invest in cryptocurrency slowly over time by scheduling buys daily, weekly, or monthly.</dd>
-                            </dl>
+                                <img id="small" src={require("../../Assets/images/chart.png" )}alt="img" />
+                                <dl>
+                                    <dt><strong id="strong">Recurring buys</strong></dt>
+                                    <dd id="dd">Invest in cryptocurrency slowly over time by scheduling buys daily, weekly, or monthly.</dd>
+                                </dl>
                             </div>
 
                             <div id="text-image">
-                            <img id="small" src={require("../../Assets/images/chart.png" )}alt="img" />  
-                            <dl>
-                                <dt><strong id="strong">Vault protection</strong></dt>
-                                <dd id="dd">For added security, store your funds in a vault with time delayed withdrawals.</dd>
-                            </dl>
+                                <img id="small" src={require("../../Assets/images/chart.png" )}alt="img" />  
+                                <dl>
+                                    <dt><strong id="strong">Vault protection</strong></dt>
+                                    <dd id="dd">For added security, store your funds in a vault with time delayed withdrawals.</dd>
+                                </dl>
                             </div>
 
                             <div id="text-image">
-                            <img id="small" src={require("../../Assets/images/chart.png" )}alt="img" />
-                            <dl>
-                                <dt><strong id="strong">Mobile apps</strong></dt>
-                                <dd id="dd">Stay on top of the markets with the Coinbase app for Android or iOS.</dd>
-                            </dl>
+                                <img id="small" src={require("../../Assets/images/chart.png" )}alt="img" />
+                                <dl>
+                                    <dt><strong id="strong">Mobile apps</strong></dt>
+                                    <dd id="dd">Stay on top of the markets with the Coinbase app for Android or iOS.</dd>
+                                </dl>
                             </div>
                         </Col>
                         <Col xs={12} md={8}> 
@@ -235,7 +235,7 @@ class Home extends React.Component{
                     <Row>
                         <Col>
                             <div id="bottom-list">
-                            <img id="img-small2" src={require("../../Assets/images/chart.png" )}alt="img" />
+                                <img id="img-small2" src={require("../../Assets/images/chart.png" )}alt="img" />
                                 <h3 id="secure1">Secure storage</h3>
                                 <p id="secure2">We store the vast majority of the digital assets in secure offline storage.</p>
                                 <a id="secure3" href="!#">Learn more> </a>
@@ -243,7 +243,7 @@ class Home extends React.Component{
                         </Col>
                         <Col>
                             <div id="bottom-list">
-                            <img id="img-small2" src={require("../../Assets/images/chart.png" )}alt="img" />
+                                <img id="img-small2" src={require("../../Assets/images/chart.png" )}alt="img" />
                                 <h3 id="secure1">Protected by insurance</h3>
                                 <p id="secure2">Cryptocurrency stored on our servers is covered by our insurance policy.</p>
                                 <a id="secure3" href="!#">Learn more> </a>
@@ -251,8 +251,8 @@ class Home extends React.Component{
 
                         </Col>
                         <Col>
-                        <div id="bottom-list">
-                        <img id="img-small2" src={require("../../Assets/images/chart.png" )}alt="img" />
+                            <div id="bottom-list">
+                                <img id="img-small2" src={require("../../Assets/images/chart.png" )}alt="img" />
                                 <h3 id="secure1">Industry best practices</h3>
                                 <p id="secure2">Coinbase supports a variety of the most popular digital currencies.</p>
                                 <a id="secure3" href="!#">Learn more> </a>
@@ -298,7 +298,7 @@ class Home extends React.Component{
                         <img id="img-small" src={require("../../Assets/images/chart.png" )}alt="img" />
                         <p>Create an account</p>
                     </div>
-                    <hr style={{width:"20%"}} />
+                        <hr style={{width:"20%"}} />
                     <div>
                         <img id="img-small" src={require("../../Assets/images/chart.png")} alt="img" />
                         <p>Create an account</p>
@@ -307,7 +307,11 @@ class Home extends React.Component{
             </section>
 
             <section id="footer-image" >
-                
+                <div id="footer-text">
+                    <h3><strong>Earn up to $130 worth of crypto</strong></h3>
+                    <p>Discover how specific cryptocurrencies work — and get a bit of each crypto to try out for yourself.</p>
+                    <Button>start earning</Button>
+                </div> 
             </section>
 
             <div id="footer"> 
